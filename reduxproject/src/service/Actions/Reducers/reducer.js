@@ -8,10 +8,10 @@ export default function cardItems(state=initialState, action) {
 
     switch(action.type) {
         case ADD_TO_CART: {
-            return {
+            return [
                 ...state,
-                cardData:action.data
-            }
+               { cardData:action.data}
+        ]
             break
         }
         default:

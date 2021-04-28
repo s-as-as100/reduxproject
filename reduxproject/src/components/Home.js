@@ -1,9 +1,11 @@
 import React from 'react';
+import { addToCart } from './../service/Actions/action';
 
-const Home = () => {
+const Home = (props) => {
     return ( 
         <div>
             <div className="add-to-cart">
+                <span>{props.data.length}</span>
             <img src="https://static.vecteezy.com/system/resources/thumbnails/000/496/007/small/Ecommerce_998.jpg" />
             </div>
             <h1>
@@ -22,7 +24,7 @@ const Home = () => {
              </span>
                
      <div className="btn-wrapper item">
-         <button>
+         <button onClick={()=>props.addTOCartHandler({price:1000, name: '1 phone 11'})} >
              Add To Cart
          </button>
 
